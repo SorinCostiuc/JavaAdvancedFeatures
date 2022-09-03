@@ -30,5 +30,25 @@ public class Main {
                 foundNumbers.add(x - number);    //                foundNumbers.add(x - numbers.get(i));
             }
         }
+
+        System.out.println("---------------" + "\n" + "---------------");
+        /*
+        - Vreau sa ies in oras si sa fac niste cumparaturi
+        - Vreau sa vad cat am cheltuit: TV, frigider
+        - nu voi cumpara de 2 ori acelasi lucru
+         */
+        Set<Shopping> shoppings = new HashSet<>();
+        shoppings.add(Shopping.FRIDGE);
+        shoppings.add(Shopping.TV);
+        shoppings.add(Shopping.WASHING_MACHINE);
+        shoppings.add(Shopping.ESPRESSOR);
+        shoppings.add(Shopping.ESPRESSOR);
+
+        int sum = 0;
+        for (Shopping item: shoppings){
+            sum+= item.getPrice();
+        }
+        System.out.println(sum);
+
     }
 }
