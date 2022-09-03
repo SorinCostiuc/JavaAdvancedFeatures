@@ -1,4 +1,4 @@
-package colectii;
+package colectii.persons;
 
 public class Person {
     private String firstName;
