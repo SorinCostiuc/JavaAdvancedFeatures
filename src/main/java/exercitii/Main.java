@@ -49,6 +49,6 @@ public class Main {
             sum+= item.getPrice();
         }
         System.out.println(sum);
-
+        System.out.println("---------------" + "\n" + "---------------");
     }
 }
