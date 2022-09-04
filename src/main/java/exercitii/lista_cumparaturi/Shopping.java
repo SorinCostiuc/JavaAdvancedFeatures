@@ -1,4 +1,4 @@
-package exercitii;
+package exercitii.lista_cumparaturi;
 
 public enum Shopping {
     TV(1200),
