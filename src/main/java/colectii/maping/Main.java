@@ -2,6 +2,7 @@ package colectii.maping;
 
 import colectii.maping.car.Car;
 import colectii.maping.car.Model;
+import colectii.maping.car.Person;
 
 import java.util.*;
 
@@ -29,18 +30,33 @@ public class Main {
         System.out.println(cars.get("AAA"));
         System.out.println("---------------" + "\n" + "---------------");
 
+        Map<Person, Car> newCars = new HashMap<>();
+        Person stefan = new Person("Cernescu", "Stefan");
+        Person alex = new Person("Ene", "Alex");
+        Person sorin = new Person("Costiuc", "Sorin");
+        newCars.put(stefan, new Car(Model.Volkswagen, 2021, "Blue"));
+        newCars.put(new Person("Ene", "Alex"), new Car(Model.AUDI, 2022, "Black"));
+        newCars.put(sorin, new Car(Model.Volvo, 2022, "Black"));
+
+        System.out.println("Details: " + newCars.get(stefan));
+        System.out.println("Details, another mode: " + newCars.get(new Person("Cernescu", "Stefan")));
+
+
+        System.out.println("---------------" + "\n" + "---------------");
+/////////////////////Cautare 2 numere care au o anumita suma////////////////////
         List<Integer> list = Arrays.asList(1, 3, 2, 4, 5, 6, 72, 1, 23);
         Integer sum = 5;
 
         Map<Integer, Integer> sumOfTwoNumbers = new HashMap<>();
         for (Integer number : list) {
             if (sumOfTwoNumbers.get(number) != null) {
-                System.out.println("Key: " + number + "\n" + "Value: " + sumOfTwoNumbers.get(number));
+                System.out.println(sum + " este suma a - Key: " + number + "; " + "Value: " + sumOfTwoNumbers.get(number));
             } else {
                 sumOfTwoNumbers.put(sum - number, number);
             }
         }
         System.out.println("---------------" + "\n" + "---------------");
+
 
 
     }
