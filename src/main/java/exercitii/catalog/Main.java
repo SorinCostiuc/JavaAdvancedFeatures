@@ -20,7 +20,9 @@ public class Main {
 
         studentGrade.printGrades(georgel);
         studentGrade.printGrades(vasilel);
-
+        System.out.println("---------------" + "\n" + "---------------");
+        studentGrade.printAverage(georgel);
+        studentGrade.printAverage(vasilel);
 
     }
 }
