@@ -155,6 +155,27 @@ public class Main {
         System.out.println("---------------" + "\n" + "---------------");
 
 
+        ///////////////////ITERARE UN MAP////////////////////
+        Map<Integer, Integer> mapper = new HashMap<>();
+        mapper.put(1, 2);
+        mapper.put(2, 245645);
+        mapper.put(3, 24531);
+        mapper.put(4, 2487);
+        mapper.put(5, 254234);
+        mapper.put(6, 242344);
+        mapper.put(7, 2456345);
+
+        for (Integer number : mapper.values()) {
+            System.out.printf("%d ", number);
+        }
+        System.out.println("\n ---------------");
+        for (Integer number : mapper.keySet()) {
+            System.out.printf("%d ", number);
+        }
+        System.out.println("\n ---------------");
+        for (Map.Entry<Integer, Integer> entry : mapper.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
 
 
     }
