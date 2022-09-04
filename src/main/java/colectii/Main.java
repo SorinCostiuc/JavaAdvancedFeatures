@@ -3,6 +3,8 @@ package colectii;
 import colectii.groceries.Drink;
 import colectii.groceries.Food;
 import colectii.groceries.Grocery;
+import colectii.lista_inlantuita_manuala.LinkedListManual;
+import colectii.lista_inlantuita_manuala.Node;
 import colectii.persons.Person;
 
 import java.util.*;
@@ -79,7 +81,7 @@ public class Main {
 //        String[] array = new String[5]; - dimensiunea fixa a unui array
 //        String[] arrayList = new String[8]; - dimensiunea standard al unei LISTE
         List<String> list = new LinkedList<>();  //COLECTIE cu dimensiune dinamic...poate merge pana la infinit
-//        vine cu NOD-uri care tine o VALOARE si un NEXT - contine o valoare si adresa unei alte valori
+//        vine cu NOD-uri care tine o VALOARE si un NEXT - contine o valoare si adresa urmatoarei valori
 
 //        La extragerea unui element este mai usoara si mai eficienta intr-un array list decat intr-un linked list
         //la array list iti da direct index n, iar linked list parcurge toti indecsii pana ajunge la indexul dorit
@@ -89,10 +91,34 @@ public class Main {
 
 //                  LISTELE VOR PASTRA MEREU ORDINEA DE INSERARE
 
+        ///////////CUM FUNCTIONEAZA MANUAL LINKED LIST/////////////////
+        System.out.println("---------------" + "\n" + "---------------");
+        LinkedListManual manualList = new LinkedListManual();
+        Node node = new Node();
+        node.setValue(1);
+        node.setNext(null);
+
+        Node node2 = new Node();
+        node2.setValue(2);
+        node2.setNext(null);
+
+        Node node3 = new Node();
+        node3.setValue(3);
+        node3.setNext(null);
+        manualList.add(node)
+                .add(node2)
+                .add(node3);
+        manualList.printList();
+
+        System.out.println("---------------" + "\n" + "---------------");
+        System.out.println("---------------" + "\n" + "---------------");
+
         Set<Integer> numbers = new HashSet<>();
         numbers.add(1);
         numbers.add(1);
         numbers.add(3);
+        numbers.add(2);
+        numbers.add(4);
         numbers.add(2);
         for (Integer number : numbers) {
             System.out.println(number);
@@ -126,9 +152,9 @@ public class Main {
       -  functiile hash nu sunt FUNCTII BIJECTIVE - pentru 2 imputuri diferite avem acelasi output ====> COLOZIUNE
       -  pentru a se rezolva problema coliziunii, pe un index se va face un list si se vor returna ambele valori
          */
-
-
         System.out.println("---------------" + "\n" + "---------------");
+
+
 
 
     }
