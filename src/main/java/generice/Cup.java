@@ -4,8 +4,6 @@ public class Cup<E extends Liquid> {
 
     private E liquid;
 
-
-
     public E getLiquid() {
         return liquid;
     }

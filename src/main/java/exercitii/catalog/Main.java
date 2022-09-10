@@ -7,6 +7,7 @@ public class Main {
          */
         Student georgel = new Student("George", "Coconel", "234654987");
         Student vasilel = new Student("Vasile", "Vlahel", "7841321");
+        Student bula = new Student("Bula", "Bulescu","15512341");
         Catalog studentGrade = new Catalog();
         studentGrade.addGrade(georgel, new Grade(10, Course.MATHEMATICS));
         studentGrade.addGrade(georgel, new Grade(8, Course.COMPUTER_SCIENCE));
@@ -23,6 +24,12 @@ public class Main {
         System.out.println("---------------" + "\n" + "---------------");
         studentGrade.printAverage(georgel);
         studentGrade.printAverage(vasilel);
+        try {
+            studentGrade.printAverage(bula);
+        }catch (StudentNotFoundException e){
+            System.out.println("Student not found in our class! Thank you!");
+        }
+
 
     }
 }
