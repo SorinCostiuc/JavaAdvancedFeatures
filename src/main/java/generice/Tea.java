@@ -1,12 +1,12 @@
 package generice;
 
-public class Water extends Liquid{
-    public Water(int temperature, String colour) {
+public class Tea extends Liquid{
+    public Tea(int temperature, String colour) {
         super(temperature, colour);
     }
     @Override
     public String toString() {
-        return "Water{" +
+        return "Tea{" +
                 "temperature=" + super.getTemperature() +
                 ", colour='" + super.getColour() + '\'' +
                 '}';

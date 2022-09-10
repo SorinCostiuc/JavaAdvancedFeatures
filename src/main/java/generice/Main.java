@@ -24,5 +24,17 @@ public class Main {
 
         System.out.println("---------------" + "\n" + "---------------");
 
+        Cup<Tea> firstCup = new Cup<>();
+        firstCup.setLiquid(new Tea(32, "purple"));
+        firstCup.drink();
+        System.out.println("-----");
+        Cup<Water> secondCup = new Cup<>();
+        secondCup.setLiquid(new Water(10, "non colour"));
+        secondCup.drink();
+        System.out.println("-----");
+        Cup<Juice> thirdCup = new Cup<>();
+        thirdCup.setLiquid(new Juice(15, "orange"));
+        thirdCup.drink();
+        System.out.println("---------------" + "\n" + "---------------");
     }
 }
