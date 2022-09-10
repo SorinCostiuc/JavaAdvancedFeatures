@@ -1,5 +1,7 @@
 package exercitii;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -14,5 +16,28 @@ public class Main {
                 System.out.println("Elementul care lipseste este: " + i);
             }
         }
+        System.out.println("----------");
+
+        System.out.println(areTheWordsAnagrams("Arc", "rac"));
+        System.out.println(areTheWordsAnagrams("arc", "asd"));
+        System.out.println(areTheWordsAnagrams("arc", "asdasda"));
+
+    }
+
+    public static boolean areTheWordsAnagrams(String firstWord, String secondWord) {
+        if (firstWord.length() != secondWord.length()) {
+            return false;
+        }
+        char[] arr1 = firstWord.toUpperCase().toCharArray();
+        char[] arr2 = secondWord.toUpperCase().toCharArray();
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        for (int i = 0; i < arr1.length; i++) {
+            if (arr1[i] != arr2[i]) {
+                return false;
+            }
+        }
+        return true;
     }
 }
+
