@@ -1,4 +1,4 @@
-package Inheritance.animal;
+package Inheritance.interfata.animal;
 
 public abstract class Animal {
     public Animal(){

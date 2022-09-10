@@ -5,10 +5,10 @@ public class Grade {
     private Course course;
 
 
-
     public Integer getValue() {
         return value;
     }
+
     public void setValue(Integer value) {
         this.value = value;
     }
@@ -16,6 +16,7 @@ public class Grade {
     public Course getCourse() {
         return course;
     }
+
     public void setCourse(Course course) {
         this.course = course;
     }

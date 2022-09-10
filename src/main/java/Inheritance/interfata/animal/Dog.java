@@ -1,4 +1,4 @@
-package Inheritance.animal;
+package Inheritance.interfata.animal;
 
 public class Dog extends Animal {
     public Dog(){

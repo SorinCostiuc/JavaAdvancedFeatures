@@ -1,4 +1,4 @@
-package Inheritance.animal;
+package Inheritance.interfata.animal;
 
 public class Main {
     public static void main(String[] args) {

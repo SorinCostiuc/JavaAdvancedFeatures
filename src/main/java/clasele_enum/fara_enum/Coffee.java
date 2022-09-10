@@ -2,6 +2,7 @@ package clasele_enum.fara_enum;
 
 public class Coffee {
     private String name;
+    private Integer price;
 
     public String getName() {
         return name;
@@ -18,6 +19,4 @@ public class Coffee {
     public void setPrice(Integer price) {
         this.price = price;
     }
-
-    private Integer price;
 }
