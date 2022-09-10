@@ -17,15 +17,18 @@ public class Catalog {
     public Catalog addGrade(Student student, Grade grade) {
         if (gradesBook.get(student) == null) {
             gradesBook.put(student, new HashMap<>() {{
-                put(grade.getCourse(), new ArrayList<>(List.of(grade)));
+                put(grade.getCourse(), new ArrayList<>());
             }});
-        } else {
-            if (gradesBook.get(student).get(grade.getCourse()) == null) {
-                gradesBook.get(student).put(grade.getCourse(), new ArrayList<>(List.of(grade)));
-            } else {
-                gradesBook.get(student).get(grade.getCourse()).add(grade);
-            }
         }
+        if (gradesBook.get(student).get(grade.getCourse()) == null) {
+            gradesBook.get(student).put(grade.getCourse(), new ArrayList<>());
+        }
+        gradesBook.get(student).get(grade.getCourse()).add(grade);
+
+//          //////ALTERNATIVE///////
+//        gradesBook.computeIfAbsent(student, x -> new HashMap<>() {{
+//                put(grade.getCourse(), new ArrayList<>());
+//            }}).computeIfAbsent(grade.getCourse(), x -> new ArrayList<>()).add(grade);
         return this;
     }
 
