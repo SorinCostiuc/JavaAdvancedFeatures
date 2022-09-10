@@ -1,4 +1,4 @@
-package recap;
+package recap.food;
 
 public abstract class Food {
     private String[] ingredients;

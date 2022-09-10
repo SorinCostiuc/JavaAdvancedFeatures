@@ -1,4 +1,4 @@
-package recap;
+package recap.food;
 
 public class Pizza extends Food {
 
