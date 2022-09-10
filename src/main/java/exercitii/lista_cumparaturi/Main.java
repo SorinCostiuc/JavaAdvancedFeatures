@@ -31,7 +31,7 @@ public class Main {
             }
         }
 
-        System.out.println("---------------" + "\n" + "---------------");
+        System.out.println("-------------------" + "\n" + "-------------------");
         /*
         - Vreau sa ies in oras si sa fac niste cumparaturi
         - Vreau sa vad cat am cheltuit: TV, frigider
