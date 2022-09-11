@@ -60,15 +60,12 @@ public class Main {
         myInterface.filterNumbers(someNumbers)
                 .forEach(System.out::println);
 
-
         System.out.println("-------------------");
 //        refolosit codul de sus
 
         Calculate calculate = new Calculate(myInterface);
         calculate.getMyEvenNumbers(someNumbers)
                 .forEach(System.out::println);
-
-
     }
 
     ////////////////EASY LOADING si LAZY LOADING///////////////
