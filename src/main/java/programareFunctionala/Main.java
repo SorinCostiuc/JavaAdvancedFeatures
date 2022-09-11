@@ -50,6 +50,25 @@ public class Main {
 
         Supplier<Integer> number = getNumberSupplier();
         System.out.println(number.get());
+        System.out.println("-------------------" + "\n" + "-------------------");
+
+//        //////////INTERFATA FUNCTIONALA CREATA de noi///////////////
+        EvenNumbers myInterface = (numbers) -> numbers.stream()
+                .filter(myNumber -> myNumber % 2 != 1)
+                .map(myNumber -> myNumber * 2)
+                .collect(Collectors.toList());
+        myInterface.filterNumbers(someNumbers)
+                .forEach(System.out::println);
+
+
+        System.out.println("-------------------");
+//        refolosit codul de sus
+
+        Calculate calculate = new Calculate(myInterface);
+        calculate.getMyEvenNumbers(someNumbers)
+                .forEach(System.out::println);
+
+
     }
 
     ////////////////EASY LOADING si LAZY LOADING///////////////
