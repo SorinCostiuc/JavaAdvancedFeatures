@@ -2,6 +2,7 @@ package programareFunctionala;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -27,9 +28,16 @@ public class Main {
                 .filter(number -> number % 2 != 1)
                 .map(number -> number * 2)
                 .filter(number -> number > 20)
-                .findFirst().get();
+                .findFirst().orElseGet(getNumberSupplier());     //daca valoarea mea este mai mare decat una existenta se face astfel: .findFirst().orElse(null);
+        //orElse se va executa indiferent daca avem sau nu nevoie de el
+        //supplierul se va executa doar daca avem nevoie de el (daca filtru nu da nici un rezultat)
+        //punem orElseGet si dam metoda Supplier pentru a se executa doar atunci cand avem nevoie
+
+
         System.out.println(numberFound);
+
         System.out.println("----------");
+
 //          print all greater than 20
         someNumbers.stream()
                 .filter(number -> number % 2 != 1)
@@ -38,6 +46,18 @@ public class Main {
                 .collect(Collectors.toList()) //.toList - in a version greater than java 11
                 .forEach(number -> System.out.println(number)); //.forEach(System.out::println);  - in a version greater than java 11
 
+        System.out.println("----------");
 
+        Supplier<Integer> number = getNumberSupplier();
+        System.out.println(number.get());
+    }
+
+    ////////////////EASY LOADING si LAZY LOADING///////////////
+    private static Integer getNumber() {
+        return 5 * 5;
+    }
+
+    private static Supplier<Integer> getNumberSupplier() {
+        return () -> 5 * 5;
     }
 }
