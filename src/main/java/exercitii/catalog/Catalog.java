@@ -5,10 +5,6 @@ import java.util.*;
 public class Catalog {
     Map<Student, Map<Course, List<Grade>>> gradesBook;
 
-    public Catalog(Map<Student, Map<Course, List<Grade>>> gradesBook) {
-        this.gradesBook = gradesBook;
-    }
-
     public Catalog() {
         this.gradesBook = new HashMap<>();
     }
